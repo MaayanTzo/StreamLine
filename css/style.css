@@ -1,3 +1,22 @@
 body{
-    background-color: red;
+    height: 100vh;
+    width: 100vh;
+    background-image: url('http://sfwallpaper.com/images/cool-background-images-hd-29.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+}
+.featured{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tagline{
+    font-size: 66px;
+    font-weight: bold;
+}
+.subtitle{
+    font-size: 24px;
 }
