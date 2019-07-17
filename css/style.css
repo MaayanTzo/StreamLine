@@ -6,6 +6,7 @@ body{
     background-repeat: no-repeat;
     color: white;
     display: flex;
+    font-family: 'PT Sans', sans-serif;
 }
 .featured{
     display: flex;

@@ -5,34 +5,35 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 
-    <div class="featured">
-        <div class="tagline">ENHANCE Your Daily Commute</div>
-        <div class="subtitle">Make the most of every minute</div>
-        <div class="section-title">
-            <h3> I am </h3> <input type="radio" name="gender" value="male"> Male</input>
-            <input type="radio" name="gender" value="female"> Female</input>
-            <input type="radio" name="age" value="0-18"> 0 - 18</input>
-            <input type="radio" name="age" value="18-30"> 18 - 30</input>
-            <input type="radio" name="age" value="30+"> 30 +</input>
-            <h3> Where are you going ? </h3>
-            <input type="radio" name="destination-type" value="Work">Work</input>
-            <input type="radio" name="destination-type" value="Gym">Gym</input>
-            <input type="radio" name="destination-type" value="Out">Partying</input>
+    <h2> Welcome to StreamLine</h2>
+
+    <span>
+        Let us know what's your trip about?
+        StreamLine will generate your fit playlist
+    </span>
+    <div>
+        Connect to Spotify
+        <div>
+            <div id="login">
+             <h1>First, log in to spotify</h1>
+             <a href="/login">Log in</a>
+            </div>
+            <div id="loggedin">
+            </div>
+         </div>
+        
         </div>
-        <div class="section-title">
-            <h3> How long ? </h3>
-            <input type="range" name="duration" min="0" max="2" />
-            <button id="button">Send</button>
-        </div>
-    </div>
-    </div>
+    <span>
+        I don't have a Spotify account
+    </span>
+
 
 
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
