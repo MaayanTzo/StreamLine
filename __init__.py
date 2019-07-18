@@ -22,7 +22,7 @@ def stylesheets(filename):
 
 @get('/get-playlist')
 def get_playlists():
-    articles="hello"
+    articles="hi"
     #playlist=users.findOne({'gender': , 'age': , 'destination': , 'duration': })
     return json.dumps(articles)
 
