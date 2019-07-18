@@ -12,6 +12,14 @@ users = db.users
 def index():
     return static_file("LP.html", root='')
 
+@route('/')
+def index():
+    return static_file("index.html", root='')
+
+@route('/images/<filename:re:.*\.(png|jpg|svg|jpeg)>')
+def stylesheets(filename):
+    return static_file(filename, root='images')
+
 @route('/<filename:re:.*\.css>')
 def stylesheets(filename):
     return static_file(filename, root='')
@@ -37,4 +45,4 @@ def get_playlists():
     return json.dumps(new_user)
 
 if __name__ == '__main__':
-    run(host='localhost',port=7000, debug=True)
+    run(host='localhost',port=7050, debug=True)
