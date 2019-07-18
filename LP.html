@@ -17,14 +17,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 
     <div class="container">
-            <img class="logo" id="streamline_logo" src="images/Picture4.png" />
         <div class="featured">
             <div class="tagline">ENHANCE Your Daily Commute</div>
             <div class="subtitle">Make the most of every minute</div>
             <div class="section-title">
                 <div class="top">
                     <div class="gender">
-                        <h3> I am </h3> <input type="radio" name="gender" value="male"> <i
+                        <h3> I am: </h3> <input type="radio" name="gender" value="male"> <i
                             class="fas fa-male"></i></input>
                         <input type="radio" name="gender" value="female"><i class="fas fa-female"></i></input>
                     </div>
@@ -34,54 +33,29 @@
                         <input type="radio" name="age" value="30+" class="radio"> 30 +</input>
                     </div>
                 </div>
-                <h3> Where are you going ? </h3>
+                <h3> On the way to: </h3>
                 <input type="radio" name="destination-type" value="Work">Work<i class="fas fa-briefcase"></i></input>
                 <input type="radio" name="destination-type" value="Gym">Gym<i class="fas fa-dumbbell"></i></input>
                 <input type="radio" name="destination-type" value="Out">Partying<i class="fas fa-glass-cheers"></i>
 
-            </input>
+                </input>
             </div>
             <div class="section-title">
-                <h3> How long ? </h3>
-                <input type="range" name="duration" min="0" max="2" />
-                <input type="submit" id="button" value="Send"></input>
+                <div>
+                    <h3> My trip will take: </h3>
+                    <input type="radio" name="duration" value="0-30 min">0-30 min</input>
+                    <input type="radio" name="duration" value="30-60 min">30-60 min</input>
+                    <input type="radio" name="duration" value="60+ min">60+ min</input>
+                    <div>
+                        <input type="submit" id="button" value="Play"></input>
+                    </div>
+                </div>
             </div>
             <div id="form-message"></div>
         </div>
     </div>
 
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
-    <script>
-        window.onSpotifyWebPlaybackSDKReady = () => {
-            const token = 'BQABTeB7viBOlOffI6tjtl6Bn6J6cfSAs46Kh86cP8HWI-KoD8WiL6DQ7smhpDdB7-AzFOfEzQJNfb4ZaMcaCdnLH-MrJEont1TneIidsqfz5jCEm0ILFw_-A_JJI0nWae5fZJgh_qU3FRH8dw-2BefS9-9_LmvzfrZLwp9rog';
-            const player = new Spotify.Player({
-                name: 'Web Playback SDK Quick Start Player',
-                getOAuthToken: cb => { cb(token); }
-            });
-
-            // Error handling
-            player.addListener('initialization_error', ({ message }) => { console.error(message); });
-            player.addListener('authentication_error', ({ message }) => { console.error(message); });
-            player.addListener('account_error', ({ message }) => { console.error(message); });
-            player.addListener('playback_error', ({ message }) => { console.error(message); });
-
-            // Playback status updates
-            player.addListener('player_state_changed', state => { console.log(state); });
-
-            // Ready
-            player.addListener('ready', ({ device_id }) => {
-                console.log('Ready with Device ID', device_id);
-            });
-
-            // Not Ready
-            player.addListener('not_ready', ({ device_id }) => {
-                console.log('Device ID has gone offline', device_id);
-            });
-
-            // Connect to the player!
-            player.connect();
-        };
-    </script>
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script src="./js/logic.js"></script>
 </body>

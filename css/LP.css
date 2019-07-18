@@ -1,5 +1,5 @@
 body {
-    background-image: url(/images/Picture3.png);
+    background-image: url('/images/Picture3.png');
     background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,9 +10,20 @@ body {
     color: #111;
     justify-content: flex-end;
 }
+.gender{
+    margin-bottom: 20px;
+}
 .title{
     font-size: 44px;
     font-weight: bold;
+}
+.fas.fa-briefcase, .fas.fa-dumbbell,.fas.fa-glass-cheers{
+    font-size: 40px;
+    color: darkgrey;
+    margin-left:10px;
+}
+h3{
+    font-size: 16px;
 }
 .text{
     margin-top: 20px;
@@ -64,14 +75,31 @@ li a {
 }
 
 .tagline {
-    font-size: 66px;
+    font-size: 46px;
     font-weight: bold;
 }
 
 .subtitle {
     font-size: 24px;
 }
-
+#button{
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    background: rgb(101, 197, 133);
+    border: none;
+    font-style: italic;
+    font-size: 24px;
+    color: white;
+}
+.fas.fa-female{
+    font-size: 50px;
+    color: pink;
+}
+.fas.fa-male{
+    font-size: 50px;
+    color: lightblue;
+}
 li a:hover {
     background-color: #111;
 }
@@ -81,7 +109,9 @@ li a:hover {
 #spotify-logo img {
     width: 50px;
 }
-
+.section-title{
+    margin-bottom: 20px;
+}
 #firstline {
     margin-left: -41px; 
 }
