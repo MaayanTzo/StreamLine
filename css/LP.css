@@ -7,10 +7,15 @@ body {
     font-size: x-large
 }
 .black_text{
-    color: #111
+    color: #111;
+    justify-content: flex-end;
+}
+.title{
+    font-size: 44px;
+    font-weight: bold;
 }
 .text{
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px
 }
 ul {
@@ -70,10 +75,11 @@ li a {
 li a:hover {
     background-color: #111;
 }
-
+#spotify-logo{
+    font-size:12px;
+}
 #spotify-logo img {
-    width: 30px;
-    height: 30px;
+    width: 50px;
 }
 
 #firstline {
