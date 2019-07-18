@@ -16,7 +16,7 @@ body {
 }
 .text{
     margin-top: 20px;
-    margin-bottom: 50px
+    margin-bottom: 20px
 }
 ul {
     height: 48px;
@@ -76,7 +76,7 @@ li a:hover {
     background-color: #111;
 }
 #spotify-logo{
-    font-size:12px;
+    font-size: 16px;
 }
 #spotify-logo img {
     width: 50px;
