@@ -41,7 +41,7 @@ def js(filename):
 def get_playlists():
     articles="hi"
     id=random.randint(1,6)
-    playsound('C:\\dev\\Hackathon\\StreamLine\\data\\' + str(id) + '.mp3')
+    playsound('C:\\Users\\Mikael\\Desktop\\ITC\\Hackathon\\StreamLine\\data\\' + str(id) + '.mp3')
     return json.dumps(articles)
 
 @post('/get-playlist')
