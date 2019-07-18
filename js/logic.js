@@ -1,4 +1,4 @@
-class userInput {
+/*class userInput {
     constructor(gender, age, destination, duration){
         this.gender = gender;
         this.age = age;
@@ -10,7 +10,7 @@ class userInput {
     }
 }
 
-var userInfo = new userInput();
+var userInfo = new userInput("Male","0-18","Work",0);
 userInfo.gender = $("input[name=gender]:checked").val();
 userInfo.age = $("input[name=age]:checked").val();
 userInfo.destination = $("input[name=destination-type]:checked").val();
@@ -32,16 +32,16 @@ function getUserInfo(){
     return userInfo;
 }
 
-$("#button").on("click", getUserInfo);
+$("#button").on("click", getUserInfo);*/
 /*var userInfo = {
     "gender": "Male",
     "age": "0-18",
     "destination": "Work",
     "duration": 0
-}
+}*/
 
 function getUserInfo(){
-    var genderValue = $("input[name=gender]:checked").val();
+    /*var genderValue = $("input[name=gender]:checked").val();
     if (genderValue) {
         userInfo["gender"] = genderValue;
     }
@@ -55,7 +55,17 @@ function getUserInfo(){
     }
     var durationValue = $("input[name=duration]").val();
     userInfo["duration"] = durationValue;
-    console.log(userInfo);
+    //console.log(userInfo);*/
+    $.ajax({
+        type: "GET",
+        url: "/get-playlist",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: userInfo,
+        success: function(response){
+            console.log(response)
+        }
+    })
     $.ajax({
         type: "POST",
         url: "/get-playlist",
@@ -69,4 +79,4 @@ function getUserInfo(){
     return userInfo;
 }
 
-$("#button").on("click", getUserInfo);*/
+$("#button").on("click", getUserInfo);
