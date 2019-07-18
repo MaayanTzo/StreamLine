@@ -1,19 +1,19 @@
 from bottle import *
 
 import json
-from pymongo import MongoClient
+# from pymongo import MongoClient
+#
+# client = MongoClient('mongodb+srv://jonahmil:jonahmil@cluster0-q78ti.mongodb.net/test?retryWrites=true&w=majority')
+# db = client.StreamLine
 
-client = MongoClient('mongodb+srv://jonahmil:jonahmil@cluster0-q78ti.mongodb.net/test?retryWrites=true&w=majority')
-db = client.StreamLine
-
-users = db.users
-print(users)
-
-@route('/LP')
-def LP():
-    return static_file("LP.html", root='')
+# users = db.users
+# print(users)
 
 @route('/')
+def LP():
+    return static_file("index.html", root='')
+
+@route('/LP')
 def index():
     return static_file("LP.html", root='')
 
