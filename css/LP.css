@@ -1,18 +1,24 @@
-html {    
+html {
+
     overflow: hidden;
-  }
-body{
-    background-image: url(/images/background.jpg);
+}
+
+body {
+    background-image: url(/images/Picture3.png);
     background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    color: black;
     font-family: 'PT Sans', sans-serif;
+    font-size: x-large
 }
+.black_text{
+    color: #111
+}
+
 ul {
     height: 48px;
     color: #fafafa;
-    background-color: rgb(45, 45, 45, 0.98);
     justify-content: space-between;
     display: flex;
     flex-direction: row;
@@ -40,146 +46,141 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-#streamline_logo{
+
+#streamline_logo {
+    display: flex;
     height: 45px;
     width: 45px
 }
-
-.featured{
+#LP-link{
+    color:  transparent;
+    font-size: larger
+}
+.featured {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.tagline{
+.tagline {
     font-size: 66px;
     font-weight: bold;
 }
-.gender{
-    margin-bottom: 20px;
-}
-.subtitle{
+
+.subtitle {
     font-size: 24px;
 }
+
 li a:hover {
     background-color: #111;
 }
-#spotify-logo img{
+
+#spotify-logo img {
     width: 30px;
     height: 30px;
-    display: flex;
+     
 }
-#container{
+
+#container {
     margin: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-footer{
-    width:100%!important;
-    position:absolute!important;
-    bottom:0px!important;
+
+footer {
+    width: 100% !important;
+    position: absolute !important;
+    bottom: 0px !important;
 }
-#spotify-logo{
+
+#spotify-logo {
     padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: whitesmoke;
 }
 
-body{
+body {
     font-family: 'Raleway', sans-serif;
-  }
-  
-  .search-text{
-     padding-bottom:60px;
-  }
-      
-  
-  
-  footer{
-      background-color:#222222;
-      padding: 60px 0px;
-  }
-  
-  footer ul{
-      list-style:none;
-      margin:0 auto;
-      display:inline-block;
-      padding-top:50px;
-  }
-  
-  footer ul li{
-      float:left;
-  }
-  
-  footer ul li a{
-      color:#b1aca1;
-      padding:20px;
-  }
-  
-  footer ul li a:hover{
-      color:#7dabdb;
-      text-decoration:none;
-  }
-  
-  .footer-top{
-      padding-bottom:50px;
-  }
-  
-  .footer-top .fa{
-      font-size:18px;
-      color: #FFF;
-      padding-right:10px;
-  }
-  
-  .footer-top a{
-      color:#FFF;
-      background:#333333; 
-      padding: 10px;
-  }
-  
-  .footer-top .col-lg-2:hover .fa , .footer-top .col-lg-2:hover a{
-      color:#7dabdb;
-      text-decoration:none;
-  }
-  
-  .copyright{
-      background-color:#f0f0f0;
-  }
-  
-  .copyright p{
-      font-size:12px;
-      padding:15px 0 10px 0;
-  }
-  
-  #top{
-      color: #fff;
-      background: #7dabdb;
-      cursor: pointer;
-      font-size: 18px;
-      line-height: 40px;
-      height: 40px;
-      width: 40px;
-      right: 30px;
-      position: fixed;
-      border-radius: 3px;
-      text-align: center;
-      bottom: 350px;
-  }
-  .fas.fa-female,.fas.fa-male{
-    font-size: 50px;
-  }
-  .fas.fa-female{
-      color: pink;
-  }
-  .fas.fa-male{
-      color: lightblue;
-  }
-  
+}
+
+.search-text {
+    padding-bottom: 60px;
+}
+
+footer {
+    padding: 60px 0px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: 50px;
+}
+
+footer ul li {
+    float: left;
+}
+
+footer ul li a {
+    color: #b1aca1;
+    padding: 20px;
+}
+
+footer ul li a:hover {
+    color: #7dabdb;
+    text-decoration: none;
+}
+
+.footer-top {
+    padding-bottom: 50px;
+}
+
+.footer-top .fa {
+    font-size: 18px;
+    color: #FFF;
+    padding-right: 10px;
+}
+
+.footer-top a {
+    color: #FFF;
+    padding: 10px;
+}
+
+.footer-top .col-lg-2:hover .fa,
+.footer-top .col-lg-2:hover a {
+    color: #7dabdb;
+    text-decoration: none;
+}
+
+.copyright {
+    background-color: #f0f0f0;
+}
+
+.copyright p {
+    font-size: 12px;
+    padding: 15px 0 10px 0;
+}
+
+#top {
+    color: #fff;
+    background: #7dabdb;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    right: 30px;
+    position: fixed;
+    border-radius: 3px;
+    text-align: center;
+    bottom: 350px;
+}

@@ -6,18 +6,20 @@ from random import *
 from playsound import playsound
 import random
 
+# from pymongo import MongoClient
+#
+# client = MongoClient('mongodb+srv://jonahmil:jonahmil@cluster0-q78ti.mongodb.net/test?retryWrites=true&w=majority')
+# db = client.StreamLine
+# >>>>>>> 643afd8921946007575a27b80e76b742cd5a1dc8
 
-client = MongoClient('mongodb+srv://jonahmil:jonahmil@cluster0-q78ti.mongodb.net/test?retryWrites=true&w=majority')
-db = client.StreamLine
-
-users = db.users
-print(users)
-
-@route('/LP')
-def LP():
-    return static_file("LP.html", root='')
+# users = db.users
+# print(users)
 
 @route('/')
+def LP():
+    return static_file("index.html", root='')
+
+@route('/LP')
 def index():
     return static_file("index.html", root='')
 
@@ -39,7 +41,7 @@ def js(filename):
 def get_playlists():
     articles="hi"
     id=random.randint(1,6)
-    playsound('C:\dev\Hackathon\StreamLine\data\\' + str(id) + '.mp3')
+    playsound('C:\\dev\\Hackathon\\StreamLine\\data\\' + str(id) + '.mp3')
     return json.dumps(articles)
 
 @post('/get-playlist')
