@@ -33,15 +33,15 @@ function getUserInfo(){
 }
 
 $("#button").on("click", getUserInfo);*/
-/*var userInfo = {
+var userInfo = {
     "gender": "Male",
     "age": "0-18",
     "destination": "Work",
     "duration": 0
-}*/
+}
 
 function getUserInfo(){
-    /*var genderValue = $("input[name=gender]:checked").val();
+    var genderValue = $("input[name=gender]:checked").val();
     if (genderValue) {
         userInfo["gender"] = genderValue;
     }
@@ -55,15 +55,14 @@ function getUserInfo(){
     }
     var durationValue = $("input[name=duration]").val();
     userInfo["duration"] = durationValue;
-    //console.log(userInfo);*/
+    console.log(userInfo);
     $.ajax({
         type: "GET",
         url: "/get-playlist",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        data: userInfo,
         success: function(response){
-            console.log(response)
+            //console.log(response)
         }
     })
     $.ajax({
@@ -71,12 +70,17 @@ function getUserInfo(){
         url: "/get-playlist",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        data: userInfo,
+        data: {userInfo},
         success: function(response){
             console.log(response)
+        },
+        error: function(){
+            console.log("error")
         }
+        
+        
+        
     })
-    return userInfo;
 }
 
 $("#button").on("click", getUserInfo);
