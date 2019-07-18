@@ -3,18 +3,19 @@ from bottle import *
 import json
 from pymongo import MongoClient
 
-client = MongoClient()
+client = MongoClient('mongodb+srv://jonahmil:jonahmil@cluster0-q78ti.mongodb.net/test?retryWrites=true&w=majority')
 db = client.StreamLine
 
 users = db.users
-
-@route('/')
-def index():
-    return static_file("LP.html", root='')
+print(users)
 
 @route('/')
 def index():
     return static_file("index.html", root='')
+
+@route('/')
+def index():
+    return static_file("LP.html", root='')
 
 @route('/images/<filename:re:.*\.(png|jpg|svg|jpeg)>')
 def stylesheets(filename):
@@ -36,12 +37,8 @@ def get_playlists():
 
 @post('/get-playlist')
 def get_playlists():
-    new_user = {
-        "gender": request.forms.get("gender"),
-        "age": request.forms.get("age"),
-        "destination": request.forms.get("destination"),
-        "duration": request.forms.get("duration")
-    }
+    new_user = request.POST.dict
+    ###playlist=users.findOne({'gender': new_user.gender, 'age': new_user.age, 'destination': new_user.destination, 'duration': new_user.duration})###
     return json.dumps(new_user)
 
 if __name__ == '__main__':
