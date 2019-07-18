@@ -11,24 +11,26 @@ db = client.StreamLine
 users = db.users
 print(users)
 
-@route('/')
-def index():
-    return static_file("index.html", root='')
+@route('/LP')
+def LP():
+    return static_file("LP.html", root='')
 
 @route('/')
 def index():
     return static_file("LP.html", root='')
 
+
 @route('/images/<filename:re:.*\.(png|jpg|svg|jpeg)>')
-def stylesheets(filename):
+def imges(filename):
     return static_file(filename, root='images')
 
+
 @route('/<filename:re:.*\.css>')
-def stylesheets(filename):
+def css(filename):
     return static_file(filename, root='')
 
 @route('/<filename:re:.*\.js>')
-def stylesheets(filename):
+def js(filename):
     return static_file(filename, root='')
 
 @get('/get-playlist')

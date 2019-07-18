@@ -21,18 +21,6 @@ body{
     font-size: 24px;
 }
 
-#login {
-    display: none;
-  }
-
-  #loggedin {
-    display: none;
-  }
-
-  img{
-      height: 20px;
-      width: 20px
-  }
   
 #container{
     margin: 50px;
