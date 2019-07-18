@@ -9,7 +9,7 @@ db = client.StreamLine
 users = db.users
 
 @route('/')
-def index():
+def index()
     return static_file("LP.html", root='')
 
 @route('/<filename:re:.*\.css>')
@@ -37,4 +37,4 @@ def get_playlists():
     return json.dumps(new_user)
 
 if __name__ == '__main__':
-    run(host='localhost',port=7000, debug=True)
+    run(host='localhost',port=7050, debug=True)
