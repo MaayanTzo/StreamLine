@@ -12,6 +12,14 @@ users = db.users
 def index()
     return static_file("LP.html", root='')
 
+@route('/')
+def index():
+    return static_file("index.html", root='')
+
+@route('/images/<filename:re:.*\.(png|jpg|svg|jpeg)>')
+def stylesheets(filename):
+    return static_file(filename, root='images')
+
 @route('/<filename:re:.*\.css>')
 def stylesheets(filename):
     return static_file(filename, root='')
@@ -22,7 +30,7 @@ def stylesheets(filename):
 
 @get('/get-playlist')
 def get_playlists():
-    articles="hello"
+    articles="hi"
     #playlist=users.findOne({'gender': , 'age': , 'destination': , 'duration': })
     return json.dumps(articles)
 
