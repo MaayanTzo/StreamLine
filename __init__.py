@@ -2,7 +2,9 @@ from bottle import *
 
 import json
 from pymongo import MongoClient
-from playground import playsound
+from random import *
+from playsound import playsound
+import random
 
 
 client = MongoClient('mongodb+srv://jonahmil:jonahmil@cluster0-q78ti.mongodb.net/test?retryWrites=true&w=majority')
@@ -17,7 +19,7 @@ def LP():
 
 @route('/')
 def index():
-    return static_file("LP.html", root='')
+    return static_file("index.html", root='')
 
 
 @route('/images/<filename:re:.*\.(png|jpg|svg|jpeg)>')
@@ -36,13 +38,14 @@ def js(filename):
 @get('/get-playlist')
 def get_playlists():
     articles="hi"
-    #playlist=users.findOne({'gender': , 'age': , 'destination': , 'duration': })
+    id=random.randint(1,6)
+    playsound('C:\dev\Hackathon\StreamLine\data\\' + str(id) + '.mp3')
     return json.dumps(articles)
 
 @post('/get-playlist')
 def get_playlists():
     new_user = request.POST.dict
-    ###playlist=users.findOne({'gender': new_user.gender, 'age': new_user.age, 'destination': new_user.destination, 'duration': new_user.duration})###
+
     return json.dumps(new_user)
 
 if __name__ == '__main__':

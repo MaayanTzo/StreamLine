@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/v4-shims.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/v4-shims.css">
     <link rel="stylesheet" type="text/css" href="./css/LP.css">
 </head>
 
@@ -17,19 +17,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
 
     <div class="container">
+            <img class="logo" id="streamline_logo" src="images/Picture4.png" />
         <div class="featured">
             <div class="tagline">ENHANCE Your Daily Commute</div>
             <div class="subtitle">Make the most of every minute</div>
             <div class="section-title">
-                <h3> I am </h3> <input type="radio" name="gender" value="male"> <i class="fas fa-male"></i></input>
-                <input type="radio" name="gender" value="female"><i class="fas fa-female"></i></input>
-                <input type="radio" name="age" value="0-18"> 0 - 18</input>
-                <input type="radio" name="age" value="18-30"> 18 - 30</input>
-                <input type="radio" name="age" value="30+"> 30 +</input>
+                <div class="top">
+                    <div class="gender">
+                        <h3> I am </h3> <input type="radio" name="gender" value="male"> <i
+                            class="fas fa-male"></i></input>
+                        <input type="radio" name="gender" value="female"><i class="fas fa-female"></i></input>
+                    </div>
+                    <div class="age">
+                        <input type="radio" name="age" value="0-18" class="radio"> 0 - 18</input>
+                        <input type="radio" name="age" value="18-30" class="radio"> 18 - 30</input>
+                        <input type="radio" name="age" value="30+" class="radio"> 30 +</input>
+                    </div>
+                </div>
                 <h3> Where are you going ? </h3>
-                <input type="radio" name="destination-type" value="Work">Work</input>
-                <input type="radio" name="destination-type" value="Gym">Gym</input>
-                <input type="radio" name="destination-type" value="Out">Partying</input>
+                <input type="radio" name="destination-type" value="Work">Work<i class="fas fa-briefcase"></i></input>
+                <input type="radio" name="destination-type" value="Gym">Gym<i class="fas fa-dumbbell"></i></input>
+                <input type="radio" name="destination-type" value="Out">Partying<i class="fas fa-glass-cheers"></i>
+
+            </input>
             </div>
             <div class="section-title">
                 <h3> How long ? </h3>
